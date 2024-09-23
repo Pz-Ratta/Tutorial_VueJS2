@@ -65,6 +65,14 @@ export default{
                 skill: this.employee.skill
             }
             this.$emit("save", newEmp);
+            this.resetForm();
+        },
+        resetForm() {
+            this.employee.name = "";
+            this.employee.salary = 0;
+            this.employee.department = "";
+            this.employee.gender = "";
+            this.employee.skill =[];
         }
     }
 }
